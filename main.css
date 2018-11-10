@@ -9,13 +9,6 @@ body {
     height: 100vh;
 }
 
-no.logo {
-    margin: 0 auto;
-    width: 350px;
-    height: 350px;
-    position: relative;
-}
-
 .G {
     color: #f93e3e;
 }
@@ -25,8 +18,18 @@ no.logo {
 }
 
 .letter {
-    font-size: 130px;
+    font-size: 140px;
     font-family: 'Passion One', cursive;
+    display: inline-block;
+    padding: 24px 6px 24px 12px;
+}
+.back a {
+    font-size: 30px;
+    padding: 80px 40px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Passion One', cursive;
+    color: #f93e3e;
 }
 
 
@@ -37,7 +40,7 @@ no.logo {
     height: 350px;
     background: transparent;
     border-radius: 50%;
-    border: 2px dashed #000;
+    border: 2px dashed #d5d5d5;
     -webkit-animation-name: Rotate;
     -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
@@ -93,3 +96,48 @@ no.logo {
         -ms-transform: rotate(360deg);
     }
 }
+
+.relative {
+    position: relative;
+}
+
+.flip-container {
+    perspective: 1000px;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 200px;
+    height: 200px;
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 11px #d4d4d4;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
