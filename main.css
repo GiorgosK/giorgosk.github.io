@@ -1,6 +1,11 @@
+html,
 body {
     margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
+
 
 .center-contents {
     display: flex;
@@ -23,6 +28,7 @@ body {
     display: inline-block;
     padding: 24px 6px 24px 12px;
 }
+
 .back a {
     font-size: 30px;
     padding: 80px 40px;
@@ -96,6 +102,11 @@ body {
         -ms-transform: rotate(360deg);
     }
 }
+
+
+/*************************************************************
+*                      flip container 
+*/
 
 .relative {
     position: relative;
